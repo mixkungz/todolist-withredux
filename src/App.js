@@ -1,21 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from 'react'
+import './App.css'
+import FormInput from './components/FormInput'
+import SeperateList from './components/SeperateList'
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div className='App'>
+        <header className='App-header'>
+          <img src={require('./logo.svg')} className='App-logo' alt='logo' />
+          <h1 className='App-title'>Powered by React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-12 mt-4'>
+              <FormInput />
+            </div>
+          </div>
+          <SeperateList />
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
